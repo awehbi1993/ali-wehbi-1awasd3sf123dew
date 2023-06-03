@@ -21,6 +21,6 @@ public interface StudentsRepository extends CrudPagingAndSortingRepository<Stude
 	Page<Student> findByClassClassName(@Param("name") String name,@Param("page") Pageable page);
 	
 	@Query("SELECT s FROM Student s WHERE EXISTS (SELECT 1 FROM s.class ci WHERE"
-			+ "						ci.classId = teacher.class.classId")
+			+ "						ci.classId = teacher.lecture.classId")
 			Page<Student> getStudentsByTeacher(@Param("teacher") Teacher teacher, @Param("page") Pageable page);
 	}

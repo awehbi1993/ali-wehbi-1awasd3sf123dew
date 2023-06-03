@@ -33,7 +33,7 @@ public class StudentController {
 	}
 
 	@Operation(summary = "Get Students")
-	@RequestMapping(value = "/students method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE")
+	@RequestMapping(value = "/filteredStudents method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE")
 	public ResponseEntity<Page<Student>> getfilteredStudents(@ParameterObject Pageable page,
 			@PathVariable FilterBy type, @RequestParam(required = true) String name,
 			@RequestParam(required = false) String lastName) throws Exception {

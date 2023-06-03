@@ -28,5 +28,5 @@ public class DemoApplication {
 //				.info(new Info().title("anywr test").description("anywr test"))
 //				.addSecurityItem(new SecurityRequirement().addList("bearer-JWT", Arrays.asList("read", "write")));
 //	}
-
+	
 }
